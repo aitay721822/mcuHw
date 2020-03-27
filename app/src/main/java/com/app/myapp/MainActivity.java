@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnRollDice.setOnClickListener(btnRollDiceOnClick);
         for(int id : imageViewId)
             ((ImageView)findViewById(id)).setOnClickListener(this);
-        mTextView.setText(String.format(Locale.TAIWAN,"%s%d",getString(R.string.dice_result),1));
         mImgViewDice2.setTag(1);
+        mTextView.setText(String.format(Locale.TAIWAN,"%s%d",getString(R.string.dice_result),(int)mImgViewDice2.getTag()));
     }
 
     private View.OnClickListener btnRollDiceOnClick = new View.OnClickListener() {
