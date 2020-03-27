@@ -41,10 +41,10 @@ public class Animation {
 	public void start(final int duration){
 		if(animDraw == null) return;
 		if(listener != null) listener.onAnimationStart();
-		animDraw.start();
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
+				animDraw.start();
 				try {
 					Thread.sleep(duration);
 				} catch (InterruptedException e) {
